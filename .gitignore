@@ -1,0 +1,16 @@
+# Node modules (backend + frontend)
+**/node_modules/
+
+# Logs
+*.log
+
+# Env files
+**/.env
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Vite or build tools (if used)
+dist/
+build/
