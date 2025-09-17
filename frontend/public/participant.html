@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participant Dashboard - Speed Modelling</title>
+    <link rel="stylesheet" href="../src/styles/index.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+</head>
+<body>
+    <div class="container dashboard">
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <h2>Welcome, <span id="participantName"></span>!</h2>
+            <div class="competition-status">
+                <div class="status-indicator" id="competitionStatus">
+                    <span class="status-dot waiting"></span>
+                    <span id="statusText">Waiting for competition to start...</span>
+                </div>
+                <div class="timer" id="timerDisplay">
+                    <strong>Time: </strong><span id="timer">00:00:00</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Instructions Panel -->
+        <div class="instructions" id="instructionsPanel">
+            <h4>📋 Competition Instructions:</h4>
+            <ul>
+                <li>Wait for the admin to start the competition</li>
+                <li>Once started, the 2D drawing will be revealed</li>
+                <li>Create an accurate 3D CAD model based on the drawing</li>
+                <li>Apply the specified material properties</li>
+                <li>Upload your completed CAD file (.step, .iges, .sldprt, etc.)</li>
+                <li><strong>⚠️ Timer stops automatically when you upload your file</strong></li>
+            </ul>
+        </div>
+
+        <!-- Drawing Section -->
+        <div class="drawing-section" id="drawingSection" style="display: none;">
+            <h4>📐 Competition Drawing</h4>
+            <div class="material-info">
+                <strong>Material Specification:</strong> <span id="materialInfo">Will be announced when competition starts</span>
+            </div>
+            <div class="drawing-container">
+                <img id="drawingImage" src="" alt="2D Engineering Drawing" style="display: none;" />
+                <div class="drawing-placeholder" id="drawingPlaceholder">
+                    2D Engineering Drawing will appear here when competition starts
+                </div>
+            </div>
+        </div>
+
+        <!-- Upload Section -->
+        <div class="upload-section" id="uploadSection" style="display: none;">
+            <h4>📤 Submit Your 3D Model</h4>
+            <div class="upload-instructions">
+                <p><strong>Accepted formats:</strong> .step, .iges, .sldprt, .prt, .dwg, .x_t</p>
+                <p><strong>Maximum file size:</strong> 50 MB</p>
+            </div>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <div class="file-input-container">
+                    <input type="file" id="modelFile" accept=".step,.iges,.sldprt,.prt,.dwg,.x_t" required />
+                    <label for="modelFile" class="file-input-label">
+                        <span class="file-icon">📁</span>
+                        <span id="fileLabel">Choose CAD File</span>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="calculatedMass">Calculated Mass (grams):</label>
+                    <input type="number" id="calculatedMass" step="0.001" placeholder="Enter mass from your CAD software" required />
+                </div>
+                <button type="submit" id="uploadBtn" class="upload-btn">
+                    <span class="btn-icon">🚀</span>
+                    Submit Model & Stop Timer
+                </button>
+            </form>
+        </div>
+
+        <!-- Completion Message -->
+        <div class="completion-section" id="completionSection" style="display: none;">
+            <div class="success-message">
+                <h3>✅ Submission Successful!</h3>
+                <div class="completion-stats">
+                    <p><strong>Your Time:</strong> <span id="finalTime"></span></p>
+                    <p><strong>File Uploaded:</strong> <span id="uploadedFileName"></span></p>
+                    <p><strong>Submitted Mass:</strong> <span id="submittedMass"></span> grams</p>
+                    <p><strong>Submission Rank:</strong> #<span id="submissionRank"></span></p>
+                </div>
+                <p class="thank-you">Thank you for participating! Results will be announced shortly.</p>
+            </div>
+        </div>
+
+        <!-- Message Area -->
+        <div id="message" class="message"></div>
+
+        <!-- Logout -->
+        <div class="logout-section">
+            <button id="logoutBtn" class="logout-btn">🚪 Exit Competition</button>
+        </div>
+    </div>
+
+    <script src="../src/utils/participant.js"></script>
+</body>
+</html>

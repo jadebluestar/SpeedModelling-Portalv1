@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Speed Modelling</title>
+    <link rel="stylesheet" href="../src/styles/index.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+</head>
+<body>
+    <div class="container admin-dashboard">
+        <!-- Admin Header -->
+        <div class="admin-header">
+            <h1>🛠️ Competition Control Center</h1>
+            <div class="competition-stats">
+                <div class="stat-card">
+                    <span class="stat-number" id="participantCount">0</span>
+                    <span class="stat-label">Participants</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="submissionCount">0</span>
+                    <span class="stat-label">Submissions</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="competitionTime">00:00:00</span>
+                    <span class="stat-label">Competition Time</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Admin Login (Initially Visible) -->
+        <div class="admin-login" id="adminLogin">
+            <div class="form-box">
+                <h2>Admin Authentication</h2>
+                <form id="adminLoginForm">
+                    <div class="form-group">
+                        <input type="text" id="adminUsername" placeholder="Admin Username" required />
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="adminPassword" placeholder="Admin Password" required />
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+                <div class="admin-toggle">
+                    <a href="index.html">← Back to Participant Login</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Admin Controls (Hidden Initially) -->
+        <div class="admin-controls-section" id="adminControlsSection" style="display: none;">
+            <!-- Competition Setup -->
+            <div class="control-panel">
+                <h3>📋 Competition Setup</h3>
+                <div class="setup-controls">
+                    <div class="form-group">
+                        <label for="materialSelect">Competition Material:</label>
+                        <select id="materialSelect">
+                            <option value="aluminum">Aluminum (2.70 g/cm³)</option>
+                            <option value="steel">Steel (7.85 g/cm³)</option>
+                            <option value="abs">ABS Plastic (1.04 g/cm³)</option>
+                            <option value="brass">Brass (8.50 g/cm³)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="drawingUpload">Upload 2D Drawing:</label>
+                        <input type="file" id="drawingUpload" accept=".jpg,.jpeg,.png,.pdf" />
+                        <div id="drawingPreview" class="drawing-preview"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Competition Controls -->
+            <div class="control-panel">
+                <h3>🎮 Competition Controls</h3>
+                <div class="admin-buttons">
+                    <button class="admin-btn start-btn" id="startCompetition" disabled>
+                        <span class="btn-icon">▶️</span>
+                        Start Competition
+                    </button>
+                    <button class="admin-btn reveal-btn" id="revealDrawing" disabled>
+                        <span class="btn-icon">👁️</span>
+                        Reveal Drawing
+                    </button>
+                    <button class="admin-btn stop-btn" id="stopCompetition" disabled>
+                        <span class="btn-icon">⏹️</span>
+                        Stop Competition
+                    </button>
+                    <button class="admin-btn reset-btn" id="resetCompetition">
+                        <span class="btn-icon">🔄</span>
+                        Reset All
+                    </button>
+                </div>
+                <div class="competition-status-admin">
+                    <div class="status-indicator">
+                        <span class="status-dot" id="adminStatusDot"></span>
+                        <span id="adminStatusText">Competition Not Started</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Live Participants -->
+            <div class="control-panel">
+                <h3>👥 Live Participants</h3>
+                <div class="participants-list" id="participantsList">
+                    <p class="empty-state">No participants logged in yet...</p>
+                </div>
+            </div>
+
+            <!-- Submissions & Leaderboard -->
+            <div class="control-panel full-width">
+                <h3>🏆 Live Leaderboard</h3>
+                <div class="leaderboard-controls">
+                    <button class="admin-btn export-btn" id="exportResults">
+                        <span class="btn-icon">📊</span>
+                        Export Results
+                    </button>
+                    <button class="admin-btn refresh-btn" id="refreshLeaderboard">
+                        <span class="btn-icon">🔄</span>
+                        Refresh
+                    </button>
+                </div>
+                <div class="leaderboard-table">
+                    <table id="leaderboardTable">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Participant Name</th>
+                                <th>Email</th>
+                                <th>Completion Time</th>
+                                <th>Submitted Mass (g)</th>
+                                <th>File Name</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="leaderboardBody">
+                            <tr>
+                                <td colspan="8" class="empty-state">No submissions yet...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Logout -->
+            <div class="admin-logout">
+                <button id="adminLogout" class="logout-btn">🚪 Logout Admin</button>
+            </div>
+        </div>
+
+        <!-- Messages -->
+        <div id="adminMessage" class="message"></div>
+    </div>
+
+    <script src="../src/utils/admin.js"></script>
+</body>
+</html>

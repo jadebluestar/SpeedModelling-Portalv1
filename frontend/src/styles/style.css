@@ -1,0 +1,26 @@
+/* Style for the loading overlay */
+#loading-overlay {
+    /* The CSS properties from the HTML snippet */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Optional: Add a subtle spinning animation to the logo */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Optional: Style the logo image itself */
+#loading-overlay img {
+    height: 100px; /* Adjust size as needed */
+    width: 100px;
+}
