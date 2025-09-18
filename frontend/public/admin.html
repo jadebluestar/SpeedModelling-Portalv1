@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard - Speed Modelling</title>
+    <title>Admin Dashboard</title>
     <link rel="stylesheet" href="../src/styles/index.css" />
     <link rel="icon" type="image/png" href="favicon.png" />
 </head>
@@ -11,7 +11,7 @@
     <div class="container admin-dashboard">
         <!-- Admin Header -->
         <div class="admin-header">
-            <h1>🛠️ Competition Control Center</h1>
+            <h1>Competition Control Center</h1>
             <div class="competition-stats">
                 <div class="stat-card">
                     <span class="stat-number" id="participantCount">0</span>
@@ -51,7 +51,7 @@
         <div class="admin-controls-section" id="adminControlsSection" style="display: none;">
             <!-- Competition Setup -->
             <div class="control-panel">
-                <h3>📋 Competition Setup</h3>
+                <h3> Competition Setup</h3>
                 <div class="setup-controls">
                     <div class="form-group">
                         <label for="materialSelect">Competition Material:</label>
@@ -72,22 +72,22 @@
 
             <!-- Competition Controls -->
             <div class="control-panel">
-                <h3>🎮 Competition Controls</h3>
+                <h3>Competition Controls</h3>
                 <div class="admin-buttons">
                     <button class="admin-btn start-btn" id="startCompetition" disabled>
-                        <span class="btn-icon">▶️</span>
+                        <span class="btn-icon">▶</span>
                         Start Competition
                     </button>
                     <button class="admin-btn reveal-btn" id="revealDrawing" disabled>
-                        <span class="btn-icon">👁️</span>
+                        <span class="btn-icon"></span>
                         Reveal Drawing
                     </button>
                     <button class="admin-btn stop-btn" id="stopCompetition" disabled>
-                        <span class="btn-icon">⏹️</span>
+                        <span class="btn-icon">⏹</span>
                         Stop Competition
                     </button>
                     <button class="admin-btn reset-btn" id="resetCompetition">
-                        <span class="btn-icon">🔄</span>
+                        <span class="btn-icon"></span>
                         Reset All
                     </button>
                 </div>
@@ -101,7 +101,7 @@
 
             <!-- Live Participants -->
             <div class="control-panel">
-                <h3>👥 Live Participants</h3>
+                <h3>Live Participants</h3>
                 <div class="participants-list" id="participantsList">
                     <p class="empty-state">No participants logged in yet...</p>
                 </div>
@@ -112,11 +112,11 @@
                 <h3>🏆 Live Leaderboard</h3>
                 <div class="leaderboard-controls">
                     <button class="admin-btn export-btn" id="exportResults">
-                        <span class="btn-icon">📊</span>
+                        <span class="btn-icon"></span>
                         Export Results
                     </button>
                     <button class="admin-btn refresh-btn" id="refreshLeaderboard">
-                        <span class="btn-icon">🔄</span>
+                        <span class="btn-icon"></span>
                         Refresh
                     </button>
                 </div>
@@ -145,7 +145,7 @@
 
             <!-- Logout -->
             <div class="admin-logout">
-                <button id="adminLogout" class="logout-btn">🚪 Logout Admin</button>
+                <button id="adminLogout" class="logout-btn"> Logout Admin</button>
             </div>
         </div>
 

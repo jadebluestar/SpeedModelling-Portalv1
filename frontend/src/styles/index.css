@@ -7,9 +7,8 @@
 
 /* Your Original Styles */
 body {
-    background-color: rgb(0, 88, 160);
+    background-color: #0054a6;
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #0054a6, #0077cc);
     color: #060606;
     line-height: 1.6;
 }
@@ -35,7 +34,7 @@ body, html {
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
     text-align: center;
-    width: 300px;
+    width: 500px;
 }
 
 .form-box h1 {
@@ -46,7 +45,7 @@ body, html {
     width: 100%;
     padding: 10px;
     margin-top: 15px;
-    border: 1px solid #151010;
+    border: 3px solid #151010;
     border-radius: 8px;
     font-size: 16px;
 }
@@ -55,7 +54,7 @@ body, html {
     margin-top: 20px;
     padding: 10px 20px;
     width: 100%;
-    background-color: #0077cc;
+    background-color: #0054a6;
     color: white;
     border: none;
     border-radius: 8px;
@@ -74,7 +73,7 @@ body, html {
 }
 
 .form-box button:hover {
-    background-color: #0054a6;
+    background-color: #004080;
 }
 
 /* Dashboard Containers */
@@ -123,7 +122,7 @@ body, html {
 }
 
 .admin-toggle a {
-    color: #0077cc;
+    color: #0054a6;
     text-decoration: none;
     font-size: 0.9rem;
 }
@@ -138,22 +137,20 @@ h1 {
     color: #333;
     margin-bottom: 0.5rem;
     font-size: 2.5rem;
-    background: linear-gradient(45deg, hsl(213, 86%, 54%), #fb811e);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #0054a6;
 }
 
 h2 {
     color: #0a0707;
     margin-bottom: 1rem;
+
 }
 
 h3 {
     text-align: center;
     color: #100a0a;
     margin-bottom: 1rem;
-    font-weight: 400;
+    font-weight: bold;
 }
 
 h4 {
@@ -199,9 +196,9 @@ select {
 input:focus,
 select:focus {
     outline: none;
-    border-color: #d21d1d;
+    border-color: #0054a6;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 84, 166, 0.2);
 }
 
 /* File Upload */
@@ -221,17 +218,17 @@ input[type="file"] {
     gap: 0.5rem;
     width: 100%;
     padding: 1rem;
-    border: 2px dashed #d21d1d;
+    border: 2px dashed #0054a6;
     border-radius: 10px;
     background: #f8f9ff;
     cursor: pointer;
     transition: all 0.3s ease;
-    color: #d21d1d;
+    color: #0054a6;
     font-weight: 500;
 }
 
 .file-input-label:hover {
-    background: #d21d1d;
+    background: #0054a6;
     color: white;
     transform: translateY(-2px);
 }
@@ -243,7 +240,7 @@ input[type="file"] {
 /* Buttons */
 button {
     padding: 1rem 2rem;
-    background: linear-gradient(45deg, #d21d1d, #fb811e);
+    background: #0054a6;
     color: white;
     border: none;
     border-radius: 10px;
@@ -261,7 +258,7 @@ button {
 
 button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 10px 25px rgba(0, 84, 166, 0.3);
 }
 
 button:active {
@@ -277,7 +274,7 @@ button:disabled {
 /* Button Variants */
 .upload-btn {
     width: 100%;
-    background: linear-gradient(45deg, #4CAF50, #45a049);
+    background: #4CAF50;
 }
 
 .upload-btn:hover {
@@ -285,7 +282,7 @@ button:disabled {
 }
 
 .logout-btn {
-    background: linear-gradient(45deg, #6c757d, #5a6268);
+    background: #6c757d;
     font-size: 0.9rem;
     padding: 0.75rem 1.5rem;
 }
@@ -296,16 +293,16 @@ button:disabled {
     margin: 0.25rem;
 }
 
-.start-btn { background: linear-gradient(45deg, #4CAF50, #45a049); }
-.stop-btn { background: linear-gradient(45deg, #f44336, #d32f2f); }
-.reveal-btn { background: linear-gradient(45deg, #2196F3, #1976D2); }
-.reset-btn { background: linear-gradient(45deg, #ff9800, #f57c00); }
-.export-btn { background: linear-gradient(45deg, #9c27b0, #7b1fa2); }
-.refresh-btn { background: linear-gradient(45deg, #00bcd4, #00acc1); }
+.start-btn { background: #4CAF50; }
+.stop-btn { background: #f44336; }
+.reveal-btn { background: #2196F3; }
+.reset-btn { background: #ff9800; }
+.export-btn { background: #9c27b0; }
+.refresh-btn { background: #00bcd4; }
 
 /* Status Elements */
 .status-bar {
-    background: linear-gradient(45deg, #4CAF50, #45a049);
+    background: #4CAF50;
     color: white;
     padding: 1.5rem;
     border-radius: 15px;
