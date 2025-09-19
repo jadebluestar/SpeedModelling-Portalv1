@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Participant Dashboard - Speed Modelling</title>
-    <link rel="stylesheet" href="../src/styles/index.css" />
+    <link rel="stylesheet" href="src/styles/index.css" />
     <link rel="icon" type="image/png" href="favicon.png" />
 </head>
 <body>
@@ -25,20 +25,20 @@
 
         <!-- Instructions Panel -->
         <div class="instructions" id="instructionsPanel">
-            <h4>📋 Competition Instructions:</h4>
+            <h4> Competition Instructions:</h4>
             <ul>
                 <li>Wait for the admin to start the competition</li>
                 <li>Once started, the 2D drawing will be revealed</li>
                 <li>Create an accurate 3D CAD model based on the drawing</li>
                 <li>Apply the specified material properties</li>
                 <li>Upload your completed CAD file (.step, .iges, .sldprt, etc.)</li>
-                <li><strong>⚠️ Timer stops automatically when you upload your file</strong></li>
+                <li><strong> Timer stops automatically when you upload your file</strong></li>
             </ul>
         </div>
 
         <!-- Drawing Section -->
         <div class="drawing-section" id="drawingSection" style="display: none;">
-            <h4>📐 Competition Drawing</h4>
+            <h4> Competition Drawing</h4>
             <div class="material-info">
                 <strong>Material Specification:</strong> <span id="materialInfo">Will be announced when competition starts</span>
             </div>
@@ -52,7 +52,7 @@
 
         <!-- Upload Section -->
         <div class="upload-section" id="uploadSection" style="display: none;">
-            <h4>📤 Submit Your 3D Model</h4>
+            <h4> Submit Your 3D Model</h4>
             <div class="upload-instructions">
                 <p><strong>Accepted formats:</strong> .step, .iges, .sldprt, .prt, .dwg, .x_t</p>
                 <p><strong>Maximum file size:</strong> 50 MB</p>
@@ -61,7 +61,7 @@
                 <div class="file-input-container">
                     <input type="file" id="modelFile" accept=".step,.iges,.sldprt,.prt,.dwg,.x_t" required />
                     <label for="modelFile" class="file-input-label">
-                        <span class="file-icon">📁</span>
+                        <span class="file-icon"></span>
                         <span id="fileLabel">Choose CAD File</span>
                     </label>
                 </div>
@@ -70,7 +70,7 @@
                     <input type="number" id="calculatedMass" step="0.001" placeholder="Enter mass from your CAD software" required />
                 </div>
                 <button type="submit" id="uploadBtn" class="upload-btn">
-                    <span class="btn-icon">🚀</span>
+                    <span class="btn-icon"></span>
                     Submit Model & Stop Timer
                 </button>
             </form>
@@ -79,7 +79,7 @@
         <!-- Completion Message -->
         <div class="completion-section" id="completionSection" style="display: none;">
             <div class="success-message">
-                <h3>✅ Submission Successful!</h3>
+                <h3> Submission Successful!</h3>
                 <div class="completion-stats">
                     <p><strong>Your Time:</strong> <span id="finalTime"></span></p>
                     <p><strong>File Uploaded:</strong> <span id="uploadedFileName"></span></p>
@@ -99,6 +99,6 @@
         </div>
     </div>
 
-    <script src="../src/utils/participant.js"></script>
+    <script src="src/utils/participant.js"></script>
 </body>
 </html>
