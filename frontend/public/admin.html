@@ -98,6 +98,29 @@
                     </div>
                 </div>
             </div>
+            <div class="container admin-dashboard">
+  <h2>Upload 2D Drawing</h2>
+
+  <div class="upload-section">
+    <form id="drawingUploadForm">
+      <div class="file-input-container">
+        <input type="file" id="drawingFile" accept=".png,.jpg,.jpeg,.pdf" required />
+        <label for="drawingFile" class="file-input-label">
+          <span class="file-icon">📂</span> Choose Drawing File
+        </label>
+      </div>
+      <button type="submit" class="upload-btn">Upload Drawing</button>
+    </form>
+  </div>
+
+  <div class="drawing-preview">
+    <h3>Current Drawing</h3>
+    <div class="drawing-container">
+      <img id="drawingImage" src="" alt="No drawing uploaded yet" />
+    </div>
+  </div>
+</div>
+
 
             <!-- Live Participants -->
             <div class="control-panel">

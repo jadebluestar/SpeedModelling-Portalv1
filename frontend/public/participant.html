@@ -49,6 +49,28 @@
                 </div>
             </div>
         </div>
+<div class="container dashboard">
+  <h2>Competition Drawing</h2>
+  <div class="drawing-section">
+    <div class="drawing-container">
+      <img id="drawingImage" src="" alt="Waiting for admin to upload drawing..." />
+    </div>
+    <a id="downloadDrawing" href="#" download class="upload-btn">Download Drawing</a>
+  </div>
+
+  <h2>Upload Your CAD File</h2>
+  <div class="upload-section">
+    <form id="cadUploadForm">
+      <div class="file-input-container">
+        <input type="file" id="cadFile" accept=".stl,.step,.stp,.f3d" required />
+        <label for="cadFile" class="file-input-label">
+          <span class="file-icon">📂</span> Choose CAD File
+        </label>
+      </div>
+      <button type="submit" class="upload-btn">Upload CAD</button>
+    </form>
+  </div>
+</div>
 
         <!-- Upload Section -->
         <div class="upload-section" id="uploadSection" style="display: none;">
